@@ -12,11 +12,24 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+    enum Operation: String{
+        case Divide = "/"
+        case Multiply = "*"
+        case Subtract = "-"
+        case Add = "+"
+        case Equals = "="
+        case Empty = "Empty"
+        
+    }
+    
     @IBOutlet weak var outPutLbl: UILabel!
     
     var btnSound: AVAudioPlayer!
     
     var runnigNumber = ""
+    var leftValStr = ""
+    var rightValStr = ""
+    var currentOperation: Operation = Operation.Empty
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +40,69 @@ class ViewController: UIViewController {
         
         try! btnSound = AVAudioPlayer(contentsOfURL: soundURL)
         
+        outPutLbl.text = "0"
+        
     }
     
     
 
     @IBAction func numberPressed(btn: UIButton!){
         
-        btnSound.play()
+        playSound()
+        
+        runnigNumber += "\(btn.tag)"
+        
+        outPutLbl.text = runnigNumber
         
     }
+    
+    @IBAction func onDividePressed(sender: AnyObject) {
+        processOperation(Operation.Divide)
+    
+    }
+    
+    @IBAction func onMultiplyPressed(sender: AnyObject) {
+        processOperation(Operation.Multiply)
+    }
+    
+    
+    @IBAction func onSubtractPressed(sender: AnyObject) {
+        processOperation(Operation.Subtract)
+    }
+    
+    
+    @IBAction func onAddPressed(sender: AnyObject) {
+        processOperation(Operation.Add)
+    }
+    
+    
+    @IBAction func onEqualPressed(sender: AnyObject) {
+        processOperation(Operation.Equals)
+    }
+    
+    
+    
+    func processOperation(op: Operation){
+        playSound()
+        
+        if currentOperation != Operation.Empty{
+            //Run some Math
+            
+        } else {
+            //This is the first time an operator has been pressed
+            leftValStr = runnigNumber
+        }
+        
+    }
+    
+    
+    func playSound(){
+        if btnSound.playing{
+            btnSound.stop()
+        }
+        btnSound.play()
+    }
+    
     
     
     
