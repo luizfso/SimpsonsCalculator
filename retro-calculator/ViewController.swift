@@ -5,6 +5,7 @@
 //  Created by Luiz Fernando Santiago on 7/20/16.
 //  Copyright © 2016 Luiz Fernando Santiago. All rights reserved.
 //
+// Added to Github
 
 import UIKit
 import AVFoundation
