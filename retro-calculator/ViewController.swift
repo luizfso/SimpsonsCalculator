@@ -17,14 +17,15 @@ class ViewController: UIViewController {
         case Multiply = "*"
         case Subtract = "-"
         case Add = "+"
-//        case Equals = "="
+        case Equals = "="
         case Empty = "Empty"
         
     }
     
     @IBOutlet weak var outPutLbl: UILabel!
     
-    var btnSound: AVAudioPlayer!
+    var btnSounddoh: AVAudioPlayer!
+    var btnSounddooh: AVAudioPlayer!
     
     var runnigNumber = ""
     var leftValStr = ""
@@ -37,10 +38,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let path = NSBundle.mainBundle().pathForResource("doh2", ofType: "wav")
-        let soundURL = NSURL(fileURLWithPath: path!)
+        let pathdoh = NSBundle.mainBundle().pathForResource("doh2", ofType: "wav")
+        let soundURLdoh = NSURL(fileURLWithPath: pathdoh!)
         
-        try! btnSound = AVAudioPlayer(contentsOfURL: soundURL)
+        try! btnSounddoh = AVAudioPlayer(contentsOfURL: soundURLdoh)
+        
+        let pathdooh = NSBundle.mainBundle().pathForResource("doh3", ofType: "wav")
+        let soundURLdooh = NSURL(fileURLWithPath: pathdooh!)
+        
+        try! btnSounddooh = AVAudioPlayer(contentsOfURL: soundURLdooh)
         
         outPutLbl.text = "0"
         
@@ -50,7 +56,7 @@ class ViewController: UIViewController {
 
     @IBAction func numberPressed(btn: UIButton!){
         
-        playSound()
+        playSounddoh()
         
         runnigNumber += "\(btn.tag)"
         
@@ -84,13 +90,14 @@ class ViewController: UIViewController {
     
     @IBAction func onEqualPressed(sender: AnyObject) {
 //        processOperation(Operation.Equals)
+//        playSounddooh()
         processOperation(currentOperation)
     }
     
     
     
     func processOperation(op: Operation){
-        playSound()
+        playSounddooh()
         
         if currentOperation != Operation.Empty{
             //Run some Math
@@ -126,16 +133,22 @@ class ViewController: UIViewController {
     }
     
     
-    func playSound(){
-        if btnSound.playing{
-            btnSound.stop()
+    func playSounddoh(){
+        if  btnSounddoh.playing{
+            btnSounddoh.stop()
         }
-        btnSound.play()
+        btnSounddoh.play()
     }
     
-    
-    
-    
+    func playSounddooh(){
+    if  btnSounddooh.playing{
+    btnSounddooh.stop()
+    }
+    btnSounddooh.play()
+    }
+
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
