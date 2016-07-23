@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         case Multiply = "*"
         case Subtract = "-"
         case Add = "+"
-        case Equals = "="
+//        case Equals = "="
         case Empty = "Empty"
         
     }
@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     var leftValStr = ""
     var rightValStr = ""
     var currentOperation: Operation = Operation.Empty
+    var result = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,27 +59,32 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onDividePressed(sender: AnyObject) {
+        outPutLbl.text  = String(Operation.Divide)
         processOperation(Operation.Divide)
     
     }
     
     @IBAction func onMultiplyPressed(sender: AnyObject) {
+        outPutLbl.text = String(Operation.Multiply)
         processOperation(Operation.Multiply)
     }
     
     
     @IBAction func onSubtractPressed(sender: AnyObject) {
+        outPutLbl.text = String(Operation.Subtract)
         processOperation(Operation.Subtract)
     }
     
     
     @IBAction func onAddPressed(sender: AnyObject) {
+        outPutLbl.text = String(Operation.Add)
         processOperation(Operation.Add)
     }
     
     
     @IBAction func onEqualPressed(sender: AnyObject) {
-        processOperation(Operation.Equals)
+//        processOperation(Operation.Equals)
+        processOperation(currentOperation)
     }
     
     
@@ -88,9 +95,32 @@ class ViewController: UIViewController {
         if currentOperation != Operation.Empty{
             //Run some Math
             
+            if runnigNumber != "" {
+                rightValStr = runnigNumber
+                runnigNumber = ""
+                
+                if currentOperation == Operation.Multiply{
+                    result = "\(Double(leftValStr)! * Double(rightValStr)!)"
+                } else if currentOperation == Operation.Divide{
+                    result = "\(Double(leftValStr)! / Double(rightValStr)!)"
+                } else if currentOperation == Operation.Subtract{
+                    result = "\(Double(leftValStr)! - Double(rightValStr)!)"
+                } else if currentOperation == Operation.Add{
+                    result = "\(Double(leftValStr)! + Double(rightValStr)!)"
+                }
+                
+                leftValStr = result
+                outPutLbl.text = result
+            }
+            
+            currentOperation = op
+            
+            
         } else {
             //This is the first time an operator has been pressed
             leftValStr = runnigNumber
+            runnigNumber = ""
+            currentOperation = op
         }
         
     }
