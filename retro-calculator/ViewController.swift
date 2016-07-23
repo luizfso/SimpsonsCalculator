@@ -52,17 +52,32 @@ class ViewController: UIViewController {
         
     }
     
-    
 
     @IBAction func numberPressed(_ btn: UIButton!){
         
         playSounddoh()
+        
         
         runnigNumber += "\(btn.tag)"
         
         outPutLbl.text = runnigNumber
         
     }
+    
+    @IBAction func onDotPressed(_ sender: AnyObject){
+       
+//        if rightValStr == "" && leftValStr == ""{
+
+        if leftValStr == ""{
+            runnigNumber += "\(0)"
+        }else{
+            runnigNumber += "."
+        }
+        
+        outPutLbl.text = runnigNumber
+        
+    }
+    
     
     @IBAction func onDividePressed(_ sender: AnyObject) {
         outPutLbl.text  = String(Operation.Divide)
@@ -94,6 +109,18 @@ class ViewController: UIViewController {
         processOperation(currentOperation)
     }
     
+    @IBAction func onClearPressed(_ sender: AnyObject) {
+        
+        
+        runnigNumber = ""
+        leftValStr = ""
+        rightValStr = ""
+        currentOperation = Operation.Empty
+        result = ""
+        outPutLbl.text = "0"
+        
+        
+    }
     
     
     func processOperation(_ op: Operation){

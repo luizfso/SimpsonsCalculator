@@ -113,7 +113,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Luiz Fernando Santiago";
 				TargetAttributes = {
 					C89F1F1D1D40410400BDD703 = {
@@ -302,6 +302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sports4life.simpsons-calculator";
 				PRODUCT_NAME = "simpsons-calculator";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
