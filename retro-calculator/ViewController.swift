@@ -38,15 +38,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let pathdoh = NSBundle.mainBundle().pathForResource("doh2", ofType: "wav")
-        let soundURLdoh = NSURL(fileURLWithPath: pathdoh!)
+        let pathdoh = Bundle.main.pathForResource("doh1", ofType: "wav")
+        let soundURLdoh = URL(fileURLWithPath: pathdoh!)
         
-        try! btnSounddoh = AVAudioPlayer(contentsOfURL: soundURLdoh)
+        try! btnSounddoh = AVAudioPlayer(contentsOf: soundURLdoh)
         
-        let pathdooh = NSBundle.mainBundle().pathForResource("doh3", ofType: "wav")
-        let soundURLdooh = NSURL(fileURLWithPath: pathdooh!)
+        let pathdooh = Bundle.main.pathForResource("doh3", ofType: "wav")
+        let soundURLdooh = URL(fileURLWithPath: pathdooh!)
         
-        try! btnSounddooh = AVAudioPlayer(contentsOfURL: soundURLdooh)
+        try! btnSounddooh = AVAudioPlayer(contentsOf: soundURLdooh)
         
         outPutLbl.text = "0"
         
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     
     
 
-    @IBAction func numberPressed(btn: UIButton!){
+    @IBAction func numberPressed(_ btn: UIButton!){
         
         playSounddoh()
         
@@ -64,31 +64,31 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func onDividePressed(sender: AnyObject) {
+    @IBAction func onDividePressed(_ sender: AnyObject) {
         outPutLbl.text  = String(Operation.Divide)
         processOperation(Operation.Divide)
     
     }
     
-    @IBAction func onMultiplyPressed(sender: AnyObject) {
+    @IBAction func onMultiplyPressed(_ sender: AnyObject) {
         outPutLbl.text = String(Operation.Multiply)
         processOperation(Operation.Multiply)
     }
     
     
-    @IBAction func onSubtractPressed(sender: AnyObject) {
+    @IBAction func onSubtractPressed(_ sender: AnyObject) {
         outPutLbl.text = String(Operation.Subtract)
         processOperation(Operation.Subtract)
     }
     
     
-    @IBAction func onAddPressed(sender: AnyObject) {
+    @IBAction func onAddPressed(_ sender: AnyObject) {
         outPutLbl.text = String(Operation.Add)
         processOperation(Operation.Add)
     }
     
     
-    @IBAction func onEqualPressed(sender: AnyObject) {
+    @IBAction func onEqualPressed(_ sender: AnyObject) {
 //        processOperation(Operation.Equals)
 //        playSounddooh()
         processOperation(currentOperation)
@@ -96,7 +96,7 @@ class ViewController: UIViewController {
     
     
     
-    func processOperation(op: Operation){
+    func processOperation(_ op: Operation){
         playSounddooh()
         
         if currentOperation != Operation.Empty{
@@ -134,14 +134,14 @@ class ViewController: UIViewController {
     
     
     func playSounddoh(){
-        if  btnSounddoh.playing{
+        if  btnSounddoh.isPlaying{
             btnSounddoh.stop()
         }
         btnSounddoh.play()
     }
     
     func playSounddooh(){
-    if  btnSounddooh.playing{
+    if  btnSounddooh.isPlaying{
     btnSounddooh.stop()
     }
     btnSounddooh.play()

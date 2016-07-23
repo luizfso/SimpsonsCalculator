@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C82897C31D430C9A00F6FD7D /* doh1.wav in Resources */ = {isa = PBXBuildFile; fileRef = C82897C21D430C9A00F6FD7D /* doh1.wav */; };
 		C89F1F221D40410400BDD703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89F1F211D40410400BDD703 /* AppDelegate.swift */; };
 		C89F1F241D40410400BDD703 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89F1F231D40410400BDD703 /* ViewController.swift */; };
 		C89F1F271D40410400BDD703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C89F1F251D40410400BDD703 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C82897C21D430C9A00F6FD7D /* doh1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = doh1.wav; sourceTree = "<group>"; };
 		C89F1F1E1D40410400BDD703 /* simpsons-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "simpsons-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89F1F211D40410400BDD703 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C89F1F231D40410400BDD703 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				C8C93A681D42EDEE00BA7E8E /* Simpsonfont.ttf */,
 				C89F1F331D405AF200BDD703 /* Minecraft.ttf */,
 				C8C93A651D42C7D500BA7E8E /* btn.wav */,
+				C82897C21D430C9A00F6FD7D /* doh1.wav */,
 				C8C93A6B1D42F67400BA7E8E /* doh2.wav */,
 				C8C93A6C1D42F67500BA7E8E /* doh3.wav */,
 				C89F1F211D40410400BDD703 /* AppDelegate.swift */,
@@ -116,6 +119,7 @@
 					C89F1F1D1D40410400BDD703 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = R3S8P8V5KU;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -142,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82897C31D430C9A00F6FD7D /* doh1.wav in Resources */,
 				C8C93A6A1D42EDEE00BA7E8E /* Simpsonfont.ttf in Resources */,
 				C8C93A6D1D42F67500BA7E8E /* doh2.wav in Resources */,
 				C8C93A661D42C7D500BA7E8E /* btn.wav in Resources */,
@@ -282,6 +287,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sports4life.simpsons-calculator";
 				PRODUCT_NAME = "simpsons-calculator";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -296,6 +302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sports4life.simpsons-calculator";
 				PRODUCT_NAME = "simpsons-calculator";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
