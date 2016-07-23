@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let path = NSBundle.mainBundle().pathForResource("btn", ofType: "wav")
+        let path = NSBundle.mainBundle().pathForResource("doh2", ofType: "wav")
         let soundURL = NSURL(fileURLWithPath: path!)
         
         try! btnSound = AVAudioPlayer(contentsOfURL: soundURL)

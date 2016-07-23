@@ -16,6 +16,8 @@
 		C8C93A661D42C7D500BA7E8E /* btn.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C93A651D42C7D500BA7E8E /* btn.wav */; };
 		C8C93A691D42EDEE00BA7E8E /* akbar.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8C93A671D42EDEE00BA7E8E /* akbar.ttf */; };
 		C8C93A6A1D42EDEE00BA7E8E /* Simpsonfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8C93A681D42EDEE00BA7E8E /* Simpsonfont.ttf */; };
+		C8C93A6D1D42F67500BA7E8E /* doh2.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C93A6B1D42F67400BA7E8E /* doh2.wav */; };
+		C8C93A6E1D42F67500BA7E8E /* doh3.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C93A6C1D42F67500BA7E8E /* doh3.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		C8C93A651D42C7D500BA7E8E /* btn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn.wav; sourceTree = "<group>"; };
 		C8C93A671D42EDEE00BA7E8E /* akbar.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = akbar.ttf; sourceTree = "<group>"; };
 		C8C93A681D42EDEE00BA7E8E /* Simpsonfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Simpsonfont.ttf; sourceTree = "<group>"; };
+		C8C93A6B1D42F67400BA7E8E /* doh2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = doh2.wav; sourceTree = "<group>"; };
+		C8C93A6C1D42F67500BA7E8E /* doh3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = doh3.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +50,7 @@
 		C89F1F151D40410400BDD703 = {
 			isa = PBXGroup;
 			children = (
-				C89F1F201D40410400BDD703 /* retro-calculator */,
+				C89F1F201D40410400BDD703 /* simpsons-calculator */,
 				C89F1F1F1D40410400BDD703 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,13 +63,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C89F1F201D40410400BDD703 /* retro-calculator */ = {
+		C89F1F201D40410400BDD703 /* simpsons-calculator */ = {
 			isa = PBXGroup;
 			children = (
 				C8C93A671D42EDEE00BA7E8E /* akbar.ttf */,
 				C8C93A681D42EDEE00BA7E8E /* Simpsonfont.ttf */,
 				C89F1F331D405AF200BDD703 /* Minecraft.ttf */,
 				C8C93A651D42C7D500BA7E8E /* btn.wav */,
+				C8C93A6B1D42F67400BA7E8E /* doh2.wav */,
+				C8C93A6C1D42F67500BA7E8E /* doh3.wav */,
 				C89F1F211D40410400BDD703 /* AppDelegate.swift */,
 				C89F1F231D40410400BDD703 /* ViewController.swift */,
 				C89F1F251D40410400BDD703 /* Main.storyboard */,
@@ -73,6 +79,7 @@
 				C89F1F2A1D40410400BDD703 /* LaunchScreen.storyboard */,
 				C89F1F2D1D40410400BDD703 /* Info.plist */,
 			);
+			name = "simpsons-calculator";
 			path = "retro-calculator";
 			sourceTree = "<group>";
 		};
@@ -136,10 +143,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8C93A6A1D42EDEE00BA7E8E /* Simpsonfont.ttf in Resources */,
+				C8C93A6D1D42F67500BA7E8E /* doh2.wav in Resources */,
 				C8C93A661D42C7D500BA7E8E /* btn.wav in Resources */,
 				C89F1F2C1D40410400BDD703 /* LaunchScreen.storyboard in Resources */,
 				C8C93A691D42EDEE00BA7E8E /* akbar.ttf in Resources */,
 				C89F1F291D40410400BDD703 /* Assets.xcassets in Resources */,
+				C8C93A6E1D42F67500BA7E8E /* doh3.wav in Resources */,
 				C89F1F341D405AF200BDD703 /* Minecraft.ttf in Resources */,
 				C89F1F271D40410400BDD703 /* Main.storyboard in Resources */,
 			);

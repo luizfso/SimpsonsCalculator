@@ -6,15 +6,15 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Minecraft.ttf">
-            <string>Minecraft</string>
+        <mutableArray key="Simpsonfont.ttf">
+            <string>AkbarPlain</string>
         </mutableArray>
     </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="retro_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="simpsons_calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,13 +23,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-bg" translatesAutoresizingMaskIntoConstraints="NO" id="lyx-Yt-EJR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="simpson-bg9" translatesAutoresizingMaskIntoConstraints="NO" id="lyx-Yt-EJR">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lyx-Yt-EJR" secondAttribute="height" multiplier="1:1" id="FUm-To-jkG"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="3Ws-6b-JEA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cleanblackboard" translatesAutoresizingMaskIntoConstraints="NO" id="3Ws-6b-JEA">
                                 <rect key="frame" x="0.0" y="558" width="600" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="zqo-fx-ORq"/>
@@ -255,7 +255,7 @@
                                     <constraint firstAttribute="width" constant="227" id="1R5-qF-GEw"/>
                                     <constraint firstAttribute="height" constant="46" id="XJD-Td-Hao"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="35"/>
+                                <fontDescription key="fontDescription" name="AkbarPlain" family="Akbar" pointSize="35"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -299,12 +299,12 @@
         <image name="9" width="111" height="114"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
+        <image name="cleanblackboard" width="3111" height="602"/>
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>
-        <image name="ground" width="888" height="72"/>
         <image name="multiply" width="111" height="114"/>
-        <image name="space-bg" width="988" height="946"/>
+        <image name="simpson-bg9" width="1570" height="1250"/>
         <image name="subtract" width="111" height="114"/>
     </resources>
 </document>
